@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>page title</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+
+    }
+
+    body {
+        background-image: url(./images.jfif);
+        height:100vh;
+        color: black;
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-size: larger;
+    }
+</style>
+
+<body>
+    <h1>patient details</h1>
+    
+
+
+    <script>
+        class medicaltest {
+            patient_details() {
+                var name = prompt("enter your name");
+                document.write("your name is : " + name + "<br>");
+                var age = prompt("enter your age");
+                document.write("your age is : " + age + "<br>");
+                var place = prompt("enter your place");
+                document.write("your place is : " + place + "<br>" + "<br>");
+            }
+            BPcheck() {
+                var BP = prompt("enter the BP level");
+                document.write("your Bp level is : " + BP + "<br>");
+                if ((BP >= 70) && (BP < 90)) {
+                    document.write("your BP is low" + "<br>");
+                    document.write("so you have to eaten chocolate,eggs,chicken and fish" + "<br>");
+                    document.write("you are take this medicines chlorthalidone,chlorothiazide" + "<br>" + "<br>");
+                }
+                else if ((BP >= 90) && (BP < 120)) {
+                    document.write("your BP is normal" + "<br>");
+                    document.write("your health is good" + "<br>" + "<br>");
+                }
+                else if ((BP >= 120) && (BP < 140)) {
+                    document.write("it is prehypertension" + "<br>");
+                    document.write("your BP is high" + "<br>");
+                    document.write("so you have to eaten fruits,vegetabels" + "<br>");
+                    document.write("you are take this medicines accebutolol,atenolol" + "<br>" + "<br>");
+                }
+                else if ((BP >= 140) && (BP <= 160)) {
+                    document.write("stage 1 hypertension" + "<br>");
+                    document.write("your BP is very high" + "<br>");
+                    document.write("so you have to eaten fish ,nuts,and legumes(beans)" + "<br>");
+                    document.write("you are take this medicines lisinopril,perindopril" + "<br>" + "<br>");
+                }
+                else if (BP > 160) {
+                    document.write("stage 2 hypertension" + "<br>");
+                    document.write("your BP is very very high" + "<br>");
+                    document.write("so you going to hospital and consider with doctor" + "<br>");
+                    document.write("you have to eaten grains,vegetables and seeds" + "<br>");
+                    document.write("you are take this medicines candesartion,irbesartan" + "<br>" + "<br>");
+                }
+            }
+            sugar() {
+                var sug = prompt("enter the suger BF or AF");
+                switch (sug) {
+                    case "BF":
+                        {
+                            var sugBF = prompt("enter the before fasting level");
+                            document.write("your suger level is before fasting : " + sugBF + "<br>");
+
+                            if ((sugBF >= 70) && (sugBF <= 99)) {
+                                document.write("your sugar is normal" + "<br>");
+                                document.write("you are good health" + "<br>" + "<br>");
+                            }
+                            else if ((sugBF >= 100) && (sugBF <= 125)) {
+                                document.write("it is prediabetes" + "<br>");
+                                document.write("you have to  eaten meals,fruits and vegtables" + "<br>");
+                                document.write("you are takr this medicines gliclazide,glimepiride" + "<br>" + "<br>");
+                            }
+                            else if (sugBF < 126) {
+                                document.write("it is diabetes" + "<br>");
+                                document.write("you are going to hospital and consider with doctor" + "<br>" + "<br>");
+                            }
+                        }; break;
+                    case "AF":
+                        {
+                            var sugAF = prompt("enter the sugAF level");
+                            document.write("your suger leveel is After Fassting : " + sugAF + "<br>");
+                            if (sugAF < 140) {
+                                document.write("sugar is normal" + "<br>");
+                                document.write("you are good health" + "<br>" + "<br>");
+                            }
+                            else if ((sugAF >= 140) && (sugAF <= 180)) {
+                                document.write("it is prediabetes" + "<br>");
+                                document.write("you have to eaten meals,fruits and vegtables" + "<br>");
+                                document.write("you are take this medicines gliclazide,glimepiride" + "<br>" + "<br>");
+                            }
+                            else if (sugAF < 200) {
+                                document.write("it is diabetes" + "<br>");
+                                document.write("you are going to hospital and consider with doctor" + "<br>" + "<br>");
+                            }
+                        }; break;
+                    default: document.write("enter only for suger Before Fasting or After Fasting " + "<br>" + "<br>"); break;
+                }
+            }
+            salt() {
+                var sl = prompt("enter the salt level");
+                document.write("your sodium level : " + sl + "<br>");
+                if (sl < 135) {
+                    document.write("you are sodium level is low" + "<br>");
+                    document.write("you have to eaten fresh vegtables and fruits" + "<br>");
+                    document.write("you are take this medicines tolvapten" + "<br>" + "<br>");
+                }
+                else if ((sl >= 135) && (sl <= 145)) {
+                    document.write("you are sodium level is normal" + "<br>");
+                    document.write("you are health is good" + "<br>" + "<br>");
+                }
+                else if (sl < 145) {
+                    document.write("it is hyponatremia" + "<br>");
+                    document.write("you have to eaten fresh fruits and vegtables" + "<br>");
+                    document.write("you are take this medicines samsca" + "<br>" + "<br>");
+                }
+            }
+            cholesterol() {
+                var CHL = prompt("enter the Cholesterol level");
+                document.write("your cholesterol level is : " + CHL + "<br>");
+                if (CHL < 200) {
+                    document.write("your cholesterol is normal" + "<br>");
+                    document.write("you are health is good" + "<br>" + "<br>");
+                }
+                else if ((CHL >= 200) && (CHL < 240)) {
+                    document.write("your cholesterol level is risk" + "<br>");
+                    document.write("you are less maximum 45chl" + "<br>" + "<br>");
+                }
+                else if (CHL <= 240) {
+                    document.write("your cholesterol level is dengours" + "<br>");
+                    document.write("you are going to hospital and conslt with doctor" + "<br>" + "<br>");
+                }
+            }
+            Hemoglobin() {
+                var gender = prompt("enter male or female");
+                document.write("your gender is : " + gender + "<br>")
+                switch (gender) {
+                    case "male":
+                        {
+                            var HMG = parseInt(prompt("enter the hemoglobin level"));
+                            document.write("your hemoglobin level is : " + HMG + "<br>");
+                            if (HMG > 13.2) {
+                                document.write("your hemoglobin level is low" + "<br>");
+                                document.write("so you have to eaten fresh vegtable and fruits" + "<br>" + "<br>");
+                            }
+                            else if ((HMG <= 13.2) && (HMG <= 16.6)) {
+                                document.write("your hemoglobin level is normal" + "<br>");
+                                document.write("your health is good" + "<br>" + "<br>");
+                            }
+                            else if (HMG > 16.6) {
+                                document.write("your hemoglobin level is high" + "<br>");
+                                document.write("so you are going to hospital conslt with doctor" + "<br>" + "<br>");
+                            }
+                        } break;
+                    case "female":
+                        {
+                            var HMG = parseInt(prompt("enter the hemoglobin level"));
+                            document.write("your hemoglobin level is : " + HMG + "<br>");
+                            if (HMG > 11.6) {
+                                document.write("your hemoglobin level is low" + "<br>");
+                                document.write("so you have to eaten fresh vegtable and fruit" + "<br>" + "<br>");
+                            }
+                            else if ((HMG < 11.6) && (HMG <= 15)) {
+                                document.write("your hemoglobin level is normal" + "<br>");
+                                document.write("your health is good" + "<br>" + "<br>");
+                            }
+                            else if (HMG > 15) {
+                                document.write("your hemoglobin level is high" + "<br>");
+                                document.write("so you going hospital and conslt with doctor" + "<br>" + "<br>");
+                            }
+                        } break;
+                    default: document.write("enter only male or female" + "<br>" + "<br>"); break;
+                }
+            }
+            BMI_check() {
+                var hight = prompt("enter your hight");
+                document.write("your hight is : " + hight + "<br>");
+                var weight = prompt("enter your weight");
+                document.write("your weight is : " + weight + "<br>");
+                var bmi = ((weight) / (hight * hight));
+                document.write("your bmi value is : " + bmi + "<br>");
+                if (bmi < 18.5) {
+                    document.write("your are under weight");
+                }
+                else if ((bmi <= 18.5) && (bmi <= 24.9)) {
+                    document.write("your are healthy weight");
+                }
+                else if ((bmi <= 25.0) && (bmi <= 29.9)) {
+                    document.write("you are over weight")
+                }
+                else if (bmi >= 30.0) {
+                    document.write("you are obesity(heavy wight)");
+                }
+            }
+        }
+
+        const obj = new medicaltest();
+        obj.patient_details();
+        obj.BPcheck();
+        obj.sugar();
+        obj.salt();
+        obj.cholesterol();
+        obj.Hemoglobin();
+        obj.BMI_check();
+
+    </script>
+    </h3>
+</body>
+
+</html>
